@@ -1,0 +1,48 @@
+
+"use strict";
+exports.__esModule = true;
+var Autos = /** @class */ (function () {
+    function Autos(marca, modelo, año) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.año = año;
+    }
+    return Autos;
+}());
+exports["default"] = Autos;
+
+    consultar(auto:string, array:Autos[]) {
+        let foundCar:Autos[] = array.filter((car:any) => (array["marca"] === auto) || (array["modelo"] === auto));
+        if (foundCar) {
+            foundCar.forEach((item:any) => console.log(item));
+        } else {
+            console.log("auto no encontrado");
+        }
+    }
+
+    borrar() {
+
+    }
+
+    darDeAlta(auto:Autos, array:Autos[]) {
+        array.push(auto);
+    }
+}
+[{
+    "marca" : "Toyota",
+    "modelo" : "Etios Hatchback",
+    "año" : 2022
+},{
+    "marca" : "Peugeot ",
+    "modelo" : "208",
+    "año" : 2000
+},{
+    "marca" : "Chevrolet",
+    "modelo" : "Cruze RS",
+    "año" : 2021
+},{
+    "marca" : "Ford",
+    "modelo" : "Ecosport",
+    "año" : 2020
+},
+]
